@@ -11,7 +11,7 @@ public class Sample2 extends BaseClass
 	  public void test1() 
 	  {
 		
-		  driver.get("https://www.flipkart.com/");
+		  driver.get("https://www.ajio.com/");
 		  driver.findElement(By.xpath("//span[text()='Allow Location']")).click();
 	  }
 	  
