@@ -1,9 +1,10 @@
 package com.tbm.automation;
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.qa.pages.LoginPage;
+
 
 
 
@@ -13,13 +14,20 @@ public class LoginTest extends BaseClass
 	@Test
 	public void test1()
 	{
-		new LoginPage().Signin().userName("deshancse@gmail.com").passWord("deshan@123").submit();
+		driver.findElement(By.xpath("//a[@href='/signin']")).click();
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("deshancse@gmail.com");
+		driver.findElement(By.xpath("//input[@placeholder='Enter password']")).sendKeys("deshan@123");
+		driver.findElement(By.xpath("//button[normalize-space()='LOGIN']")).submit();
+		
 	}
 	
 	@Test
 	public void test2()
 	{
-		new LoginPage().Signin().userName("desha@gmail.com").passWord("deshan@123").submit();
+		driver.findElement(By.xpath("//a[@href='/signin']")).click();
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("deshancse@gmail.com");
+		driver.findElement(By.xpath("//input[@placeholder='Enter password']")).sendKeys("deshan@123");
+		driver.findElement(By.xpath("//button[normalize-space()='LOGIN']")).submit();
 	}
 	
 
