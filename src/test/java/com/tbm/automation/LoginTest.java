@@ -10,10 +10,12 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseClass
 {
+	
 
 	@Test
 	public void test1()
 	{
+		
 		driver.findElement(By.xpath("//a[@href='/signin']")).click();
 		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("deshancse@gmail.com");
 		driver.findElement(By.xpath("//input[@placeholder='Enter password']")).sendKeys("deshan@123");
