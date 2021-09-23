@@ -3,13 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.tbm.automation.Sample2">
+      <class name="com.tbm.automation.LoginTest">
         <methods>
           <include name="test1"/>
+          <include name="test2"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.tbm.automation.Sample2 -->
+      </class> <!-- com.tbm.automation.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

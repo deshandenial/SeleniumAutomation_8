@@ -1,26 +1,34 @@
 package com.tbm.automation;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseClass
+import com.qa.driver.Driver;
+
+
+
+public class BaseClass 
 {
+	protected BaseClass()
+	{
+		
+	}
+	
+
 	WebDriver driver;
 	 @BeforeMethod
-	  public void beforeTest() 
+	  public void beforeTest() throws Exception 
 	  {
-		  System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
-		  driver = new ChromeDriver();
-		  driver.get("https://www.flipkart.com/");
+		 Driver.initDriver();
 	  }
 	  
 
 	  @AfterMethod
 	  public void afterTest() 
 	  {
-		  driver.close();
+		  Driver.tearDown();
 	  }
+	
 
 }
