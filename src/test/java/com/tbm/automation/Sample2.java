@@ -11,8 +11,10 @@ public class Sample2 extends BaseClass
 	  public void test1() 
 	  {
 		
-		  driver.get("https://www.ajio.com/");
-		  driver.findElement(By.xpath("//span[text()='Allow Location']")).click();
+		  driver.get("https://www.flipkart.com/");
+		  driver.findElement(By.xpath("//span[text()='Get access to your Orders, Wishlist and Recommendations']/following::input")).sendKeys("deshancse@gmail.com");
+		  driver.findElement(By.xpath("//input[@type='password']")).sendKeys("1234");
+		  driver.findElement(By.xpath("//button[contains(@class,'_2KpZ6l _2HKlqd')]//span[1]")).click();
 	  }
 	  
 
